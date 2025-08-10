@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   modules: [
     "@nuxt/eslint",
-    "@nuxt/ui-pro",
+    "@nuxt/ui",
     "@vueuse/nuxt",
     "@pinia/nuxt", // Pinia module automatically handles Pinia instantiation
   ],
