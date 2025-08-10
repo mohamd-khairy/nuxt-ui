@@ -1,6 +1,4 @@
 import { useRouter } from "#app";
-import { toast } from "#build/ui";
-import { color } from "chart.js/helpers";
 
 export function useApi() {
   const router = useRouter();
