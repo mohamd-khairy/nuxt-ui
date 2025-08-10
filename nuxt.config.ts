@@ -13,7 +13,6 @@ export default defineNuxtConfig({
   },
   plugins: ["~/plugins/piniaPersistedState.js", '~/plugins/tinymce.js'], // Make sure you don't recreate Pinia here
   css: ["~/assets/css/main.css"],
-
   routeRules: {
     "/api/**": {
       cors: true,
