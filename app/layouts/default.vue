@@ -4,7 +4,6 @@ import { ref, onMounted } from 'vue'
 // Initialize the stores
 const linksStore = useLinksStore()
 
-const open = ref(false)
 const links = ref([])
 const groups = ref([])
 // Ensure that permissions are loaded before filtering links
@@ -22,7 +21,6 @@ onMounted(async () => {
     <template #sidebar>
       <UDashboardSidebar
         id="default"
-        v-model:open="open"
         collapsible
         class="bg-elevated/25"
         side="right"
@@ -56,7 +54,11 @@ onMounted(async () => {
     </template>
 
     <template #navbar>
-      <UDashboardNavbar />
+      <UDashboardNavbar>
+        <template #leading>
+          <UDashboardSidebarCollapse />
+        </template>
+      </UDashboardNavbar>
     </template>
 
     <template #default>
